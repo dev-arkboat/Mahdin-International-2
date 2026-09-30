@@ -1,4 +1,4 @@
-import React;
+import React from 'react';
 
 interface HeaderProps {
   onNavigate: (section: string) => void;
