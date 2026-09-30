@@ -1,17 +1,30 @@
-export type TrackingStatus = 'Received' | 'Assigned' | 'In Progress' | 'Inspection' | 'Completed';
-
-export interface TrackingHistory {
-  timestamp: string;
-  status: TrackingStatus;
-  note: string;
-  location: string;
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  features: string[];
 }
 
-export interface TrackingItem {
-  trackingId: string;
-  service: string;
-  location: string;
-  status: TrackingStatus;
-  assignedTech: string;
-  updates: TrackingHistory[];
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  specialty: string;
+  image?: string;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image?: string;
+  date: string;
+}
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
 }
